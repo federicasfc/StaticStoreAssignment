@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css"/>
+    <title>Store App Assignment</title>
+</head>
+<body>
+    <header>
+        <div class="contentWrapper">
+            <!--Login Menu-->
+            <nav class="loginNav">
+                <ul>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Shopping Cart</a></li>
+                    <li><input type="search" id="search" placeholder="What can we help you find?"></li>
+                </ul>
+            </nav>
+            <!--Page Nav Menu-->
+            <h1 class="scrivenersRoost">Scrivener's</h1>
+            <h1 class="scrivenersRoost">Roost</h1>
+            <nav class="navMenu">
+                <ul>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Connect</a></li>
+                </ul>
+            </nav>
+            <!--Banner of sales-->
+        <div class="banner" id="bundle">
+            <!--Add background image of product with text on top-->
+            <h3>Paper lover's bundle</h3>
+            <a href="#">15% off now through the holiday season</a>
+        </div>
+        <div class="banner" id="giftCreativity">
+            <!--Add background image of product with text on top-->
+            <h3>Give the gift of creativity this holiday</h3>
+            <a href="#">Shop our holiday sale</a>
+        </div>
+        <div class="banner" id="organize">
+            <!--Add background image of product with text on top-->
+            <h3>Start the new year off organized</h3>
+            <a href="#">35% off on bullet journals and planners</a>
+        </div>
+        </div>
+    </header>
+    <br/>
+    <!--Main section with product panels-->
+    <div class="contentWrapper">
+        <section class="main">
+            <h1>Featured Products:</h1>
+            <br/>
+            <div class="panel">
+                <a href="#"><img src="./Assets/planner.jpg" class="product" alt="Planner"/></a>
+                <h2>2022 Planner and Pen Set</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, nulla iure maxime illo consectetur laudantium voluptatem molestiae fuga ex odio deleniti voluptate!</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="panel">
+                <a href="#"><img src="./Assets/fountainPen.jpg" class="product" alt="Fountain Pen" /> </a>
+                <h2>Fountain Pen</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, nulla iure maxime illo consectetur
+                    laudantium voluptatem molestiae fuga ex odio deleniti voluptate!</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="panel">
+                <a href="#"><img src="./Assets/bulletJournal.jpg" class="product" alt="Bullet Journal" /></a>
+                <h2>Bullet Journal</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, nulla iure maxime illo consectetur
+                    laudantium voluptatem molestiae fuga ex odio deleniti voluptate!</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="panel">
+                <a href="#"><img src="./Assets/pencilSet.jpg" class="product" alt="Pencil Set" /></a>
+                <h2>Pencil Set</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, nulla iure maxime illo consectetur
+                    laudantium voluptatem molestiae fuga ex odio deleniti voluptate!</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="panel">
+                <a href="#"><img src="./Assets/penSet.jpg" class="product" alt="Fine-Tip Pen Set" /></a>
+                <h2>Fine-Tip Pen Set</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, nulla iure maxime illo consectetur
+                    laudantium voluptatem molestiae fuga ex odio deleniti voluptate!</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="panel">
+                <a href="#"><img src="./Assets/organizeClassNotebook.jpg" class="product" alt="Standard Notebook" /></a>
+                <h2>Standard Notebook</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, nulla iure maxime illo consectetur
+                    laudantium voluptatem molestiae fuga ex odio deleniti voluptate!</p>
+                <button>Add to cart</button>
+            </div>
+            <br/>
+            <!--Email subscription box-->
+            <div class="mailingList">
+                <h3>10% Discount when you sign up for emails:</h3>
+                <p>We will send at least 10 emails daily that you will never read!!
+                <br/>
+                    Sign up by 12/17 and receive a mini notepad with your next order, free!</p>
+                <input type="email" id="emailInput" placeholder="email" />
+            </div>
+        </section>
+    </div>
+    <div class="clear"></div>
+    <footer>
+        <!--<span>&copy;2021</span> -->
+        <nav class="footerMenu">
+        <ul>
+            <li><span>&copy;2021</span></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#"><img src="./Assets/twitter_20.png" alt="Twitter Logo"/></a></li>
+            <li><a href="#"><img src="./Assets/instagramLogo.png" alt="Instagram Logo" style="height: 20px; width:20px;"/></a></li>
+            <li>Coded by Federica Sanchez</li>
+
+        </ul>
+        </nav>
+    </footer>
+    <script>
+        let slideIndex = 0;
+            function slideshow() {
+                let i;
+                let x = document.getElementsByClassName("banner");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > x.length) { slideIndex = 1 }
+                x[slideIndex - 1].style.display = "block";
+                setTimeout(slideshow, 3000); // Change image every 3 seconds
+            }
+            slideshow();
+    </script> 
+    <!--Learned how to do slideshow from W3 schools (pretty much copy and pasted). Here is the link: https://www.w3schools.com/w3css/w3css_slideshow.asp-->
+</body>
+</html>
